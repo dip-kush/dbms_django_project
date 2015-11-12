@@ -5,8 +5,6 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 admin.autodiscover()
-from dajaxice.core import dajaxice_autodiscover
-dajaxice_autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -21,7 +19,6 @@ urlpatterns = patterns('',
     url(r'^profile/$',edit_profile),
     url(r'^logout/$',logout),
     url(r'^add_topic', add_topic),
-    url(r'^dajaxice/', include('dajaxice.urls')),
     url(r'^upload/',upload),
     url(r'^viewer/',viewer),
     url(r'^add_comment/',add_comment),
@@ -32,6 +29,4 @@ urlpatterns = patterns('',
     url(r'^filter',filterpaper),
     url(r'^delete_topic',delete_topic),
     url(r'^delete_school',delete_school),
-    #url(r'^%s/' % '', include('dajaxice.urls')),
-    #url(r'^%s/' % settings.DAJAXICE_MEDIA_PREFIX, include('dajaxice.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

@@ -28,8 +28,6 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = ['http://127.0.0.1:8000/']
 
 
-#added as a part of file upload mechanism and using dajax libraries
-#-------------------------------------------------------------
 TEMPLATE_LOADERS = (
 'django.template.loaders.filesystem.Loader',
 'django.template.loaders.app_directories.Loader',
@@ -57,8 +55,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'dbms',
     'papers',
-    'dajaxice',
-    'dajax',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,7 +110,6 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
-DAJAXICE_MEDIA_PREFIX="dajaxice"
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
